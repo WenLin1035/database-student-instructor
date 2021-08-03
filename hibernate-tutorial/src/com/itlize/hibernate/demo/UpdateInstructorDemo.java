@@ -43,8 +43,8 @@ public class UpdateInstructorDemo {
 
 			// NEW CODE
 			
-			session = factory.getCurrentSession();
-			session.beginTransaction();
+			//session = factory.getCurrentSession();
+			//session.beginTransaction();
 			
 			// update email for all students
 //			System.out.println("Update email for all students");
@@ -53,7 +53,7 @@ public class UpdateInstructorDemo {
 //				.executeUpdate();
 						
 			// commit the transaction
-			session.getTransaction().commit();
+			//session.getTransaction().commit();
 
 			
 			System.out.println("Done!");
