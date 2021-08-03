@@ -43,14 +43,12 @@ public class UpdateInstructorDetailDemo {
 								tempinstruct);
 			tempinstruct.getInstructorDetail().setHobby("Eating");
 			
+			// print instructor info after updated
 			System.out.println("Instructor after update: " + 
 					tempinstruct);
-			// remove the associated object reference
-			// break bi-directional linkï¼?ï¼?ï¼?ï¼?ï¼?
 			
-			//tempInstructorDetail.getInstructor().setInstructorDetail(null);
+			//save new information to database
 			session.save(tempinstruct);
-			//session.delete(tempInstructorDetail);
 			
 			// commit transaction
 			session.getTransaction().commit();

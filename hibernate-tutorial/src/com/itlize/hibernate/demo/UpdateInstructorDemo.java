@@ -33,6 +33,7 @@ public class UpdateInstructorDemo {
 			// retrieve student based on the id: primary key
 			System.out.println("\nGetting instructor with id: " + instructorId);
 			
+			// get instructor
 			Instructor myInstructor = session.get(Instructor.class, instructorId);
 			
 			System.out.println("Updating instructor...");
@@ -40,21 +41,6 @@ public class UpdateInstructorDemo {
 			
 			// commit the transaction
 			session.getTransaction().commit();
-
-			// NEW CODE
-			
-			//session = factory.getCurrentSession();
-			//session.beginTransaction();
-			
-			// update email for all students
-//			System.out.println("Update email for all students");
-//			
-//			session.createQuery("update Student set email='students@itlize.com'")
-//				.executeUpdate();
-						
-			// commit the transaction
-			//session.getTransaction().commit();
-
 			
 			System.out.println("Done!");
 		}

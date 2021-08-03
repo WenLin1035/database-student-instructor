@@ -34,8 +34,8 @@ package com.itlize.hibernate.demo;
 				Student myStudent = session.get(Student.class, studentId);
 				
 				// delete the student
-				// System.out.println("Deleting student: " + myStudent);
-				// session.delete(myStudent);
+				 System.out.println("Deleting student: " + myStudent);
+				 session.delete(myStudent);
 				
 				// delete student id=16
 				System.out.println("Deleting student id=16");
