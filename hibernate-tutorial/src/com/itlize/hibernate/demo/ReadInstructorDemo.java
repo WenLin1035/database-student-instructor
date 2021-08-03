@@ -25,39 +25,39 @@ Session session = factory.getCurrentSession();
 
 try {			
 // create a student object
-System.out.println("Creating new instructor object...");
-Instructor tempInstructor = 
-new Instructor("Joe", "YYYee", "Joee@itlize.com");
-
-InstructorDetail tempInstructorDetail =
-new InstructorDetail(
-		"http://www.youtube.com",
-		"Playing games");
-
-//associate the objects
-tempInstructor.setInstructorDetail(tempInstructorDetail);
+//System.out.println("Creating new instructor object...");
+//Instructor tempInstructor = 
+//new Instructor("Joe", "YYYee", "Joee@itlize.com");
+//
+//InstructorDetail tempInstructorDetail =
+//new InstructorDetail(
+//		"http://www.youtube.com",
+//		"Playing games");
+//
+////associate the objects
+//tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 // start a transaction
-session.beginTransaction();
-
-// save the instructor object
-System.out.println("Saving instructor: " + tempInstructor);
-session.save(tempInstructor);
-
-// commit transaction
-session.getTransaction().commit();
-
-// find out the instructor's id: primary key
-System.out.println("Saved instructor. Generated id: " + tempInstructor.getId());
-
-// now get a new session and start transaction
-session = factory.getCurrentSession();
+//session.beginTransaction();
+//
+//// save the instructor object
+//System.out.println("Saving instructor: " + tempInstructor);
+//session.save(tempInstructor);
+//
+//// commit transaction
+//session.getTransaction().commit();
+//
+//// find out the instructor's id: primary key
+//System.out.println("Saved instructor. Generated id: " + tempInstructor.getId());
+//
+//// now get a new session and start transaction
+//session = factory.getCurrentSession();
 session.beginTransaction();
 
 // retrieve student based on the id: primary key
-System.out.println("\nGetting instructor with id: " + tempInstructor.getId());
+System.out.println("\nGetting instructor with id: " + 16);
 
-Instructor myInstructor = session.get(Instructor.class, tempInstructor.getId());
+Instructor myInstructor = session.get(Instructor.class, 16);
 
 System.out.println("Get complete: " + myInstructor);
 
